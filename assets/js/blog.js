@@ -1,6 +1,6 @@
 // TODO: Create a variable that selects the main element, and a variable that selects the back button element
 const mainEl = document.querySelector('main');
-const backBtnEl = document.querySelector('back');
+const backBtnEl = document.querySelector('#back');
 
 // TODO: Create a function that builds an element and appends it to the DOM
 const buildElement = function (type, text, parent) {
@@ -15,7 +15,7 @@ const ifEmpty = function () {
   buildElement('h2', 'Nothing has been posted..', mainEl);
   const a = buildElement('a', 'Write something down..', mainEl);
 
-  a.href = '.index.html';
+  a.href = 'index.html';
 };
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
 const renderBlogList = function () {
@@ -31,7 +31,7 @@ const renderBlogList = function () {
     const article = buildElement('article', null, mainEl);
     buildElement('h2', blog.title, article);
     buildElement('blockquote', blog.content, article);
-    buildElement('p', `From the mine of..${blog.username}`, article);
+    buildElement('p', `From the mind of..${blog.username}`, article);
 
     article.classList.add('card');
   }

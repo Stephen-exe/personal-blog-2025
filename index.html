@@ -14,34 +14,35 @@
   <script defer src="./assets/js/form.js" type="text/javascript"></script>
 </head>
 
+<body>
+  <header>
+    <button id="toggle">☀️</button>
+  </header>
+  <main>
+    <aside>
+      <h2>Daily Journal</h2>
+    </aside>
+    <section>
+      <h2>What're your thoughts?</h2>
+      <form>
+        <!-- An input element whose label and id are `username` -->
+        <label for="username">Username</label>
+        <input id="username" type="text" />
+        <!-- An input element whose label and id are `title` -->
+        <label for="title">Title</label>
+        <input id="title" type="text" />
+        <!-- A form element that contains the following: -->
+        <!-- A textarea element whose label and id are `content` -->
+        <label for="content">Content</label>
+        <textarea id="content" rows="4"></textarea>
+        <!-- A p element whose id is `error` -->
+        <p id="error">&nbsp;</p>
 
-<header>
-  <button id="toggle">☀️</button>
-</header>
-<main>
-  <aside>
-    <h2>Daily Journal</h2>
-  </aside>
-  <section>
-    <h2>What're your thoughts?</h2>
-    <form>
-      <!-- An input element whose label and id are `username` -->
-      <label for="username">Username</label>
-      <input id="username" type="text" />
-      <!-- An input element whose label and id are `title` -->
-      <label for="title">Title</label>
-      <input id="title" type="text" />
-      <!-- A form element that contains the following: -->
-      <!-- A textarea element whose label and id are `content` -->
-      <label for="content">Content</label>
-      <textarea id="content" rows="4"></textarea>
-      <!-- A p element whose id is `error` -->
-      <p id="error">&nbsp;</p>
-
-      <input type="submit" value="Submit" />
-    </form>
-  </section>
-</main>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </main>
+</body>
 
 
 </body>

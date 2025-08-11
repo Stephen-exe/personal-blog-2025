@@ -18,7 +18,27 @@ const ifEmpty = function () {
   a.href = '.index.html';
 };
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
+const renderBlogList = function () {
+  const blogs = readLocalStorage();
 
+  if (!blogs.length) {
+    ifEmpty();
+
+    return;
+  }
+
+  for (const blog of blogs) {
+    const article = buildElement('article', null, mainEl);
+    buildElement('h2', blog.title, article);
+    buildElement('blockquote', blog.content, article);
+    buildElement('p', `From the mine of..${blog.username}`, article);
+
+    article.classList.add('card');
+  }
+};
 // TODO: Call the `renderBlogList` function
-
+renderBlogList();
 // TODO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
+backBtnEl.addEventListener('click', function () {
+  redirectPage('index.html');
+});
